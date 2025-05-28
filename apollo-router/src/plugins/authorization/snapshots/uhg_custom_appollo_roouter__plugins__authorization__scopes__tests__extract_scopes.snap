@@ -1,0 +1,12 @@
+---
+source: apollo-router/src/plugins/authorization/scopes.rs
+assertion_line: 745
+expression: doc
+---
+{
+    "internal",
+    "profile",
+    "read:user",
+    "read:username",
+    "test",
+}

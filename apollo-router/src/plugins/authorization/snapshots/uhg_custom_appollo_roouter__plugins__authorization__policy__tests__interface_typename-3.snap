@@ -1,0 +1,14 @@
+---
+source: apollo-router/src/plugins/authorization/policy.rs
+assertion_line: 1622
+expression: doc
+---
+query Anonymous {
+  post(id: "1") {
+    __typename
+    ... on PublicBlog {
+      __typename
+      title
+    }
+  }
+}

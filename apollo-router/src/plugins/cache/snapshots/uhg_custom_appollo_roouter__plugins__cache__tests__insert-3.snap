@@ -1,0 +1,18 @@
+---
+source: apollo-router/src/plugins/cache/tests.rs
+assertion_line: 259
+expression: response
+---
+{
+  "data": {
+    "currentUser": {
+      "activeOrganization": {
+        "id": "1",
+        "creatorUser": {
+          "__typename": "User",
+          "id": 2
+        }
+      }
+    }
+  }
+}

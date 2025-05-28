@@ -1,0 +1,16 @@
+---
+source: apollo-router/src/services/supergraph/tests.rs
+assertion_line: 1551
+expression: stream.next_response().await.unwrap()
+---
+{
+  "errors": [
+    {
+      "message": "invalid type for variable: 'userId'",
+      "extensions": {
+        "name": "userId",
+        "code": "VALIDATION_INVALID_TYPE_VARIABLE"
+      }
+    }
+  ]
+}

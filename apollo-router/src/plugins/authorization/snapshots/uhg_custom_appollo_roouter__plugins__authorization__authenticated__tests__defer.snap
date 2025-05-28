@@ -1,0 +1,25 @@
+---
+source: apollo-router/src/plugins/authorization/authenticated.rs
+assertion_line: 844
+expression: "TestResult { query: QUERY, result: doc, paths }"
+---
+query:
+
+        query {
+            topProducts {
+                type
+
+                ...@defer {
+                    nonNullId
+                }
+            }
+        }
+        
+filtered:
+{
+  topProducts {
+    type
+  }
+}
+
+paths: ["/topProducts/... on /nonNullId"]

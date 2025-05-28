@@ -1,0 +1,29 @@
+---
+source: apollo-router/src/plugins/authorization/scopes.rs
+assertion_line: 803
+expression: "TestResult\n{\n    query: QUERY, extracted_scopes: &extracted_scopes, scopes: Vec::new(),\n    result: doc, paths\n}"
+---
+query:
+
+        {
+            topProducts {
+                type
+                internal
+            }
+
+            me {
+                id
+                name
+            }
+        }
+        
+extracted_scopes: {"internal", "profile", "read:user", "read:username", "test"}
+request scopes: []
+filtered:
+{
+  topProducts {
+    type
+  }
+}
+
+paths: ["/topProducts/internal", "/me"]

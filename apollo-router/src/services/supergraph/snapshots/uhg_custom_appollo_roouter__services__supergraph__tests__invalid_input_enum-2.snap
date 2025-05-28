@@ -1,0 +1,16 @@
+---
+source: apollo-router/src/services/supergraph/tests.rs
+assertion_line: 3680
+expression: response
+---
+{
+  "errors": [
+    {
+      "message": "invalid type for variable: 'input'",
+      "extensions": {
+        "name": "input",
+        "code": "VALIDATION_INVALID_TYPE_VARIABLE"
+      }
+    }
+  ]
+}

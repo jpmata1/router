@@ -1,0 +1,40 @@
+---
+source: apollo-router/src/axum_factory/tests.rs
+assertion_line: 2045
+expression: parts
+---
+[
+  {
+    "data": {
+      "topProducts": [
+        {
+          "upc": "1",
+          "name": "Table",
+          "reviews": null
+        },
+        {
+          "upc": "2",
+          "name": "Couch",
+          "reviews": null
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "couldn't find mock for query {\"query\":\"query($representations: [_Any!]!) { _entities(representations: $representations) { ... on Product { reviews { __typename id product { __typename upc } } } } }\",\"variables\":{\"representations\":[{\"__typename\":\"Product\",\"upc\":\"1\"},{\"__typename\":\"Product\",\"upc\":\"2\"}]}}",
+        "path": [
+          "topProducts",
+          "@"
+        ],
+        "extensions": {
+          "code": "FETCH_ERROR",
+          "service": "reviews"
+        }
+      }
+    ],
+    "hasNext": true
+  },
+  {
+    "hasNext": false
+  }
+]

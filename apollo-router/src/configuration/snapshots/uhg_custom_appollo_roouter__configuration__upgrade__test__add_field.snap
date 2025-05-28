@@ -1,0 +1,15 @@
+---
+source: apollo-router/src/configuration/upgrade.rs
+assertion_line: 360
+expression: "apply_migration(&source_doc(),\n&Migration::builder().action(Action::Add\n{\n    path: \"obj\".to_string(), name: \"field1\".to_string(), value: 25.into()\n}).description(\"add field1\").build(),).expect(\"expected successful migration\")"
+---
+{
+  "obj": {
+    "field1": 1,
+    "field2": 2
+  },
+  "arr": [
+    "v1",
+    "v2"
+  ]
+}

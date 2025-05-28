@@ -1,0 +1,19 @@
+---
+source: apollo-router/src/spec/query/transform.rs
+assertion_line: 804
+expression: "TestResult { query, result }"
+---
+query:
+
+            query($a: String) {
+                ... F
+                c
+            }
+
+            fragment F on Query {
+                a(arg: $a) @remove
+            }
+filtered:
+{
+  c
+}

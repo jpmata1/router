@@ -1,0 +1,23 @@
+---
+source: apollo-router/src/plugins/authorization/policy.rs
+assertion_line: 1126
+expression: "TestResult\n{\n    query: QUERY, extracted_policies: &extracted_policies,\n    successful_policies:\n    [\"read user\".to_string(), \"internal\".to_string()].into_iter().collect(),\n    result: doc, paths\n}"
+---
+query:
+
+        {
+            customer {
+                id
+            }
+        }
+        
+extracted_policies: {"admin", "internal", "read user"}
+successful policies: ["read user", "internal"]
+filtered:
+{
+  customer {
+    id
+  }
+}
+
+paths: []

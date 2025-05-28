@@ -1,0 +1,14 @@
+---
+source: apollo-router/src/services/supergraph/tests.rs
+assertion_line: 2997
+expression: aliased_typename
+---
+{
+  "data": {
+    "dog": {
+      "name": "Spot",
+      "nickname": "Spo",
+      "barkVolume": 7
+    }
+  }
+}

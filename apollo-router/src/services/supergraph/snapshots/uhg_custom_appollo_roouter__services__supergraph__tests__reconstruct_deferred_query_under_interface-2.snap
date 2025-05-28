@@ -1,0 +1,21 @@
+---
+source: apollo-router/src/services/supergraph/tests.rs
+assertion_line: 1836
+expression: stream.next_response().await.unwrap()
+---
+{
+  "hasNext": false,
+  "incremental": [
+    {
+      "data": {
+        "name": "B"
+      },
+      "path": [
+        "me",
+        "memberships",
+        0,
+        "account"
+      ]
+    }
+  ]
+}

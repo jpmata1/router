@@ -1,0 +1,12 @@
+---
+source: apollo-router/src/spec/query/tests.rs
+assertion_line: 5843
+expression: response
+---
+{
+  "data": {
+    "a": {
+      "b": "b"
+    }
+  }
+}

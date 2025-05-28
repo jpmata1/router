@@ -1,0 +1,8 @@
+---
+source: apollo-router/src/graphql/visitor.rs
+assertion_line: 142
+expression: visitor
+---
+name: 2
+registrationFee: 2
+ships: 1

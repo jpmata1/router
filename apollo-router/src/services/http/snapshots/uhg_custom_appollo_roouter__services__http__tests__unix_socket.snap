@@ -1,0 +1,12 @@
+---
+source: apollo-router/src/services/http/tests.rs
+assertion_line: 616
+expression: response
+---
+{
+  "data": {
+    "currentUser": {
+      "id": "0"
+    }
+  }
+}

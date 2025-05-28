@@ -1,0 +1,13 @@
+---
+source: apollo-router/src/services/supergraph/tests.rs
+assertion_line: 287
+expression: response
+---
+{
+  "data": {
+    "otherUser": {
+      "id": "2",
+      "name": "test"
+    }
+  }
+}

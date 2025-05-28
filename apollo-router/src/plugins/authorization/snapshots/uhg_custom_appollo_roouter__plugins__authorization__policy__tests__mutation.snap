@@ -1,0 +1,19 @@
+---
+source: apollo-router/src/plugins/authorization/policy.rs
+assertion_line: 888
+expression: "TestResult\n{\n    query: QUERY, extracted_policies: &extracted_policies,\n    successful_policies: Vec::new(), result: doc, paths\n}"
+---
+query:
+
+        mutation {
+            ping {
+                name
+            }
+            other
+        }
+        
+extracted_policies: {"mut", "ping", "read user", "read username"}
+successful policies: []
+filtered:
+
+paths: [""]

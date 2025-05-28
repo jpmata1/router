@@ -1,0 +1,10 @@
+---
+source: apollo-router/src/graphql/visitor.rs
+assertion_line: 157
+expression: visitor
+---
+licenseNumber: 4
+name: 4
+owner: 2
+ships: 1
+users: 1

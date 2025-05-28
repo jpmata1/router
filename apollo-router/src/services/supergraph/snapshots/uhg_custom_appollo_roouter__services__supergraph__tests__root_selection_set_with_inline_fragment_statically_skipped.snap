@@ -1,0 +1,8 @@
+---
+source: apollo-router/src/services/supergraph/tests.rs
+assertion_line: 187
+expression: response
+---
+{
+  "data": {}
+}

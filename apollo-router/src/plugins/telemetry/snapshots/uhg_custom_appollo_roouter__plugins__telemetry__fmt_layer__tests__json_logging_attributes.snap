@@ -1,0 +1,6 @@
+---
+source: apollo-router/src/plugins/telemetry/fmt_layer.rs
+assertion_line: 484
+expression: buff
+---
+{"timestamp":"[timestamp]","level":"INFO","message":"Hello from test","event_attr":"foo","target":"uhg_custom_appollo_roouter::plugins::telemetry::fmt_layer::tests","spans":[{"another":2,"custom_dyn":"test","first":"one","name":"test"}],"resource":{}}

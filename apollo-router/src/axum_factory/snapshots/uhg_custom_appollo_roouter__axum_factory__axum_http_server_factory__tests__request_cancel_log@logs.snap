@@ -1,0 +1,8 @@
+---
+source: apollo-router/src/axum_factory/axum_http_server_factory.rs
+assertion_line: 856
+expression: yaml
+---
+- fields: {}
+  level: ERROR
+  message: "broken pipe: the client closed the connection"

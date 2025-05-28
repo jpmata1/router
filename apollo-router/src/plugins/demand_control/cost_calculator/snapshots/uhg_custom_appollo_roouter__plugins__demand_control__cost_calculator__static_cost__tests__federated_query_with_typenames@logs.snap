@@ -1,0 +1,6 @@
+---
+source: apollo-router/src/plugins/demand_control/cost_calculator/static_cost.rs
+assertion_line: 1088
+expression: yaml
+---
+[]

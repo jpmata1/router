@@ -1,0 +1,6 @@
+---
+source: apollo-router/src/plugins/authorization/policy.rs
+assertion_line: 1606
+expression: paths
+---
+[]

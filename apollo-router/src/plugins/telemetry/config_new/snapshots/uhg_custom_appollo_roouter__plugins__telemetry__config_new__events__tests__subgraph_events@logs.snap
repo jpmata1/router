@@ -1,0 +1,47 @@
+---
+source: apollo-router/src/plugins/telemetry/config_new/events.rs
+assertion_line: 1108
+expression: yaml
+---
+- fields:
+    kind: my.request.event
+  level: INFO
+  message: my event message
+  span:
+    apollo.subgraph.name: subgraph
+    azure_region: ""
+    consumer_name: ""
+    graphql.document: "query { foo }"
+    graphql.operation.name: ""
+    name: subgraph
+    otel.kind: INTERNAL
+  spans:
+    - apollo.subgraph.name: subgraph
+      azure_region: ""
+      consumer_name: ""
+      graphql.document: "query { foo }"
+      graphql.operation.name: ""
+      name: subgraph
+      otel.kind: INTERNAL
+- fields:
+    kind: my.response.event
+  level: ERROR
+  message: my response event message
+  span:
+    apollo.subgraph.name: subgraph
+    azure_region: ""
+    consumer_name: ""
+    graphql.document: "query { foo }"
+    graphql.operation.name: ""
+    name: subgraph
+    otel.kind: INTERNAL
+    otel.status_code: OK
+  spans:
+    - apollo.subgraph.name: subgraph
+      azure_region: ""
+      consumer_name: ""
+      graphql.document: "query { foo }"
+      graphql.operation.name: ""
+      name: subgraph
+      otel.kind: INTERNAL
+      otel.status_code: OK

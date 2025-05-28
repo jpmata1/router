@@ -1,0 +1,39 @@
+---
+source: apollo-router/src/plugins/authorization/policy.rs
+assertion_line: 1059
+expression: "TestResult\n{\n    query: QUERY, extracted_policies: &extracted_policies,\n    successful_policies:\n    [\"read user\".to_string(),\n    \"read username\".to_string()].into_iter().collect(), result: doc, paths\n}"
+---
+query:
+
+        query {
+            topProducts {
+                type
+            }
+            itf {
+                id
+                ...F
+            }
+        }
+
+        fragment F on User {
+            name
+        }
+        
+extracted_policies: {"read user", "read username"}
+successful policies: ["read user", "read username"]
+filtered:
+{
+  topProducts {
+    type
+  }
+  itf {
+    id
+    ...F
+  }
+}
+
+fragment F on User {
+  name
+}
+
+paths: []

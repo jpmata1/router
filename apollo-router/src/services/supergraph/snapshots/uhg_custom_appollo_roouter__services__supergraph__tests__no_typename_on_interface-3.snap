@@ -1,0 +1,13 @@
+---
+source: apollo-router/src/services/supergraph/tests.rs
+assertion_line: 2901
+expression: with_reversed_fragments
+---
+{
+  "data": {
+    "dog": {
+      "name": "Spot",
+      "id": "0000"
+    }
+  }
+}

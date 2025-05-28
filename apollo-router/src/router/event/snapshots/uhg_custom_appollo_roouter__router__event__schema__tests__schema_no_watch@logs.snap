@@ -1,0 +1,6 @@
+---
+source: apollo-router/src/router/event/schema.rs
+assertion_line: 535
+expression: yaml
+---
+[]

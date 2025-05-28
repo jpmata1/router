@@ -1,0 +1,24 @@
+---
+source: apollo-router/src/plugins/telemetry/logging/mod.rs
+assertion_line: 98
+expression: yaml
+---
+- fields: {}
+  level: INFO
+  message: response
+  span:
+    apollo.subgraph.name: subgraph
+    azure_region: ""
+    consumer_name: ""
+    graphql.document: "query { foo }"
+    graphql.operation.name: ""
+    name: subgraph
+    otel.kind: INTERNAL
+  spans:
+    - apollo.subgraph.name: subgraph
+      azure_region: ""
+      consumer_name: ""
+      graphql.document: "query { foo }"
+      graphql.operation.name: ""
+      name: subgraph
+      otel.kind: INTERNAL

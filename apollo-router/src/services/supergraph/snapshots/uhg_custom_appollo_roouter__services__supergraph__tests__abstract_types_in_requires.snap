@@ -1,0 +1,12 @@
+---
+source: apollo-router/src/services/supergraph/tests.rs
+assertion_line: 3599
+expression: stream.next_response().await.unwrap()
+---
+{
+  "data": {
+    "entity": {
+      "fieldWithDependencies": "success"
+    }
+  }
+}

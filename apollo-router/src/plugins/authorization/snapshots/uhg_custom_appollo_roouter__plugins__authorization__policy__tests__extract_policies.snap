@@ -1,0 +1,11 @@
+---
+source: apollo-router/src/plugins/authorization/policy.rs
+assertion_line: 742
+expression: doc
+---
+{
+    "internal",
+    "profile",
+    "read user",
+    "read username",
+}

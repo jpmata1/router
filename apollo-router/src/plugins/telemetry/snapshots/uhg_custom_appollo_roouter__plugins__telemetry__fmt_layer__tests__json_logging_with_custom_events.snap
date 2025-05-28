@@ -1,0 +1,7 @@
+---
+source: apollo-router/src/plugins/telemetry/fmt_layer.rs
+assertion_line: 655
+expression: buff.to_string()
+---
+{"timestamp":"[timestamp]","level":"INFO","trace_id":"00000000000000000000000000000000","span_id":"0000000000000000","http.response.body":"{\"foo\": \"bar\"}","http.response.body.size":"125","message":"my message","kind":"my_custom_event","target":"uhg_custom_appollo_roouter::plugins::telemetry::config_new::events"}
+{"timestamp":"[timestamp]","level":"ERROR","trace_id":"00000000000000000000000000000000","span_id":"0000000000000000","message":"Hello from test","http.method":"GET","target":"uhg_custom_appollo_roouter::plugins::telemetry::fmt_layer::tests"}

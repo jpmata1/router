@@ -1,0 +1,12 @@
+---
+source: apollo-router/src/services/supergraph/tests.rs
+assertion_line: 56
+expression: response
+---
+{
+  "data": {
+    "currentUser": {
+      "activeOrganization": null
+    }
+  }
+}

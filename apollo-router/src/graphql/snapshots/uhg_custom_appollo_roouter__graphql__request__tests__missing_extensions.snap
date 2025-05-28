@@ -1,0 +1,8 @@
+---
+source: apollo-router/src/graphql/request.rs
+assertion_line: 501
+expression: expected_result
+---
+query: "{ topProducts { upc name reviews { id product { name } author { id name } } } }"
+variables:
+  date: "2022-01-01T00:00:00+00:00"

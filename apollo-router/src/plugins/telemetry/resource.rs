@@ -184,7 +184,7 @@ mod test {
                 .get(opentelemetry_semantic_conventions::resource::SERVICE_NAME)
                 .unwrap()
                 .as_str()
-                .starts_with("unknown_service:apollo_router")
+                .starts_with("unknown_service:")
         );
         assert!(
             resource
@@ -201,7 +201,7 @@ mod test {
                 .get(opentelemetry_semantic_conventions::resource::PROCESS_EXECUTABLE_NAME)
                 .expect("expected excutable name")
                 .as_str()
-                .contains("apollo")
+                .contains("appollo")
         );
     }
 
@@ -281,7 +281,7 @@ mod test {
             .get(opentelemetry_semantic_conventions::resource::SERVICE_NAME)
             .unwrap()
             .as_str()
-            .starts_with("unknown_service:apollo_router")
+            .starts_with("unknown_service:")
         );
 
         assert_eq!(

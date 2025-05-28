@@ -1,0 +1,21 @@
+---
+source: apollo-router/src/configuration/expansion.rs
+assertion_line: 491
+expression: value
+---
+homepage:
+  enabled: false
+  some_other_config: should remain
+include_subgraph_errors:
+  all: true
+plugins:
+  experimental.expose_query_plan: true
+sandbox:
+  enabled: true
+supergraph:
+  introspection: true
+telemetry:
+  exporters:
+    tracing:
+      experimental_response_trace_id:
+        enabled: true

@@ -1,0 +1,33 @@
+---
+source: apollo-router/src/plugins/authorization/scopes.rs
+assertion_line: 867
+expression: "TestResult\n{\n    query: QUERY, extracted_scopes: &extracted_scopes, scopes:\n    [\"profile\".to_string(), \"read:user\".to_string(),\n    \"read:username\".to_string(),].into_iter().collect(), result: doc, paths\n}"
+---
+query:
+
+        {
+            topProducts {
+                type
+                internal
+            }
+
+            me {
+                id
+                name
+            }
+        }
+        
+extracted_scopes: {"internal", "profile", "read:user", "read:username", "test"}
+request scopes: ["profile", "read:user", "read:username"]
+filtered:
+{
+  topProducts {
+    type
+  }
+  me {
+    id
+    name
+  }
+}
+
+paths: ["/topProducts/internal"]

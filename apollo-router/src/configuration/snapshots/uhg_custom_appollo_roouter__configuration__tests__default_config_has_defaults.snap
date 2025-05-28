@@ -1,0 +1,6 @@
+---
+source: apollo-router/src/configuration/tests.rs
+assertion_line: 664
+expression: "Configuration::default().validated_yaml"
+---
+plugins: ~

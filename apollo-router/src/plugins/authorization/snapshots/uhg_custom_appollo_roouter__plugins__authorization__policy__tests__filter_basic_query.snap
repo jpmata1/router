@@ -1,0 +1,29 @@
+---
+source: apollo-router/src/plugins/authorization/policy.rs
+assertion_line: 798
+expression: "TestResult\n{\n    query: QUERY, extracted_policies: &extracted_policies,\n    successful_policies: Vec::new(), result: doc, paths\n}"
+---
+query:
+
+        {
+            topProducts {
+                type
+                internal
+            }
+
+            me {
+                id
+                name
+            }
+        }
+        
+extracted_policies: {"internal", "profile", "read user", "read username"}
+successful policies: []
+filtered:
+{
+  topProducts {
+    type
+  }
+}
+
+paths: ["/topProducts/internal", "/me"]
