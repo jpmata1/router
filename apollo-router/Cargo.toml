@@ -1,10 +1,10 @@
 [package]
-name = "apollo-router"
+name = "uhg-custom-appollo-roouter"
 version = "1.59.2"
 authors = ["Apollo Graph, Inc. <packages@apollographql.com>"]
 repository = "https://github.com/apollographql/router/"
 documentation = "https://docs.rs/apollo-router"
-description = "A configurable, high-performance routing runtime for Apollo Federation 🚀"
+description = "This is a customized Apollo Router, NOT the official apollo router, do not use"
 license = "Elastic-2.0"
 
 # renovate-automation: rustc version
@@ -31,7 +31,7 @@ default = ["global-allocator"]
 # Enabled by default. Disable default features in library crates or to set it yourself:
 # ```
 # [dependencies]
-# apollo-router = {version = "1.20", default-features = false}
+# uhg-custom-appollo-roouter = {version = "1.20", default-features = false}
 # ```
 global-allocator = []
 

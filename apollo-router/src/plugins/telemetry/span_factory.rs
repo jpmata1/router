@@ -32,6 +32,10 @@ impl SpanMode {
         request: &http::Request<B>,
         license_state: LicenseState,
     ) -> ::tracing::span::Span {
+
+        // HCP customization: add lables
+        let (azure_region, consumer_name, role_id, correlation_id, cid) = crate::uhg_custom::get_uhg_labels(Some(request.headers()), None);
+
         match self {
             SpanMode::Deprecated => {
                 if matches!(
@@ -40,6 +44,15 @@ impl SpanMode {
                 ) {
                     error_span!(
                         REQUEST_SPAN_NAME,
+
+                        // HCP customization - begin!
+                        "consumerName" = consumer_name,
+                        "roles" = role_id,
+                        "correlationId" = correlation_id,
+                        "cid" = cid,
+                        "azure_region" = azure_region,
+                        // HCP customization - end!
+
                         "http.method" = %request.method(),
                         "http.request.method" = %request.method(),
                         "http.route" = %request.uri(),
@@ -55,6 +68,15 @@ impl SpanMode {
                 } else {
                     info_span!(
                         REQUEST_SPAN_NAME,
+    
+                        // HCP customization - begin!
+                        "consumerName" = consumer_name,
+                        "roles" = role_id,
+                        "correlationId" = correlation_id,
+                        "cid" = cid,
+                        "azure_region" = azure_region,
+                        // HCP customization - end!
+
                         "http.method" = %request.method(),
                         "http.request.method" = %request.method(),
                         "http.route" = %request.uri(),
@@ -172,6 +194,10 @@ impl SpanMode {
         subgraph_name: &str,
         req: &SubgraphRequest,
     ) -> ::tracing::span::Span {
+
+        // HCP customization: Add label azure_region and consumer_name to subgraph span
+        let (azure_region, consumer_name, _, _, _) = crate::uhg_custom::get_uhg_labels(None, Some(&req.context));
+
         match self {
             SpanMode::Deprecated => {
                 let query = req
@@ -195,6 +221,11 @@ impl SpanMode {
                     "otel.kind" = "INTERNAL",
                     "apollo_private.ftv1" = ::tracing::field::Empty,
                     "otel.status_code" = ::tracing::field::Empty,
+
+                    // HCP customization - begin!
+                    azure_region = %azure_region,
+                    consumer_name = %consumer_name,
+                    // HCP customization - end!
                 )
             }
             SpanMode::SpecCompliant => {
@@ -203,6 +234,11 @@ impl SpanMode {
                     "otel.kind" = "INTERNAL",
                     "apollo_private.ftv1" = ::tracing::field::Empty,
                     "otel.status_code" = ::tracing::field::Empty,
+
+                    // HCP customization - begin!
+                    azure_region = %azure_region,
+                    consumer_name = %consumer_name,
+                    // HCP customization - end!
                 )
             }
         }
