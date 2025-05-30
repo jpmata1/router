@@ -119,7 +119,7 @@ impl Subgraph {
                     .schema_definition
                     .make_mut()
                     .directives
-                    .push(defaults.applied_link_directive().into());
+                    .push(Into::<apollo_compiler::schema::Component<apollo_compiler::ast::Directive>>::into(defaults.applied_link_directive()));
                 defaults
             }
         };
@@ -136,7 +136,7 @@ impl Subgraph {
                     .schema_definition
                     .make_mut()
                     .directives
-                    .push(defaults.applied_link_directive().into());
+                    .push(Into::<apollo_compiler::schema::Component<apollo_compiler::ast::Directive>>::into(defaults.applied_link_directive()));
                 defaults
             }
         };
