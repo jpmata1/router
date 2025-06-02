@@ -627,7 +627,7 @@ mod tests {
     use std::sync::Arc;
 
     use ahash::HashMapExt;
-    use apollo_federation::query_plan::query_planner::QueryPlanner;
+    use uhg_custom_appollo_federation::query_plan::query_planner::QueryPlanner;
     use bytes::Bytes;
     use router_bridge::planner::PlanOptions;
     use test_log::test;
@@ -648,7 +648,7 @@ mod tests {
     impl StaticCostCalculator {
         fn rust_planned(
             &self,
-            query_plan: &apollo_federation::query_plan::QueryPlan,
+            query_plan: &uhg_custom_appollo_federation::query_plan::QueryPlan,
             variables: &Object,
         ) -> Result<f64, DemandControlError> {
             let js_planner_node: PlanNode = query_plan.node.as_ref().unwrap().into();

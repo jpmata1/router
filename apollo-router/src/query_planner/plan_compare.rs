@@ -10,7 +10,7 @@ use std::hash::Hasher;
 use apollo_compiler::ast;
 use apollo_compiler::Name;
 use apollo_compiler::Node;
-use apollo_federation::query_plan::QueryPlan as NativeQueryPlan;
+use uhg_custom_appollo_federation::query_plan::QueryPlan as NativeQueryPlan;
 
 use super::convert::convert_root_query_plan_node;
 use super::fetch::FetchNode;
@@ -579,7 +579,7 @@ fn same_path_condition(this: &Option<Vec<String>>, other: &Option<Vec<String>>) 
     }
 }
 
-// Copied and modified from `apollo_federation::operation::SelectionKey`
+// Copied and modified from `uhg_custom_appollo_federation::operation::SelectionKey`
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 enum SelectionKey {
     Field {

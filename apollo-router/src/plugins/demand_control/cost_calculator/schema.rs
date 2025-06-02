@@ -8,10 +8,10 @@ use apollo_compiler::schema::ExtendedType;
 use apollo_compiler::validation::Valid;
 use apollo_compiler::Name;
 use apollo_compiler::Schema;
-use apollo_federation::link::cost_spec_definition::CostDirective;
-use apollo_federation::link::cost_spec_definition::CostSpecDefinition;
-use apollo_federation::link::cost_spec_definition::ListSizeDirective;
-use apollo_federation::schema::ValidFederationSchema;
+use uhg_custom_appollo_federation::link::cost_spec_definition::CostDirective;
+use uhg_custom_appollo_federation::link::cost_spec_definition::CostSpecDefinition;
+use uhg_custom_appollo_federation::link::cost_spec_definition::ListSizeDirective;
+use uhg_custom_appollo_federation::schema::ValidFederationSchema;
 
 use super::directives::RequiresDirective;
 use crate::plugins::demand_control::DemandControlError;

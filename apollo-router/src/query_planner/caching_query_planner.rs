@@ -55,7 +55,7 @@ pub(crate) const APOLLO_OPERATION_ID: &str = "apollo_operation_id";
 
 #[derive(Debug, Clone, Hash)]
 pub(crate) enum ConfigMode {
-    Rust(Arc<apollo_federation::query_plan::query_planner::QueryPlannerConfig>),
+    Rust(Arc<uhg_custom_appollo_federation::query_plan::query_planner::QueryPlannerConfig>),
     Both(Arc<QueryPlannerConfig>),
     BothBestEffort(Arc<QueryPlannerConfig>),
     Js(Arc<QueryPlannerConfig>),

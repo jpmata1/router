@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
 use apollo_compiler::executable;
-use apollo_federation::query_plan as next;
+use uhg_custom_appollo_federation::query_plan as next;
 
 use crate::query_planner::fetch::SubgraphOperation;
 use crate::query_planner::plan;

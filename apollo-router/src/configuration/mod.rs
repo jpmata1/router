@@ -419,10 +419,10 @@ impl Configuration {
 
     pub(crate) fn rust_query_planner_config(
         &self,
-    ) -> apollo_federation::query_plan::query_planner::QueryPlannerConfig {
-        use apollo_federation::query_plan::query_planner::QueryPlanIncrementalDeliveryConfig;
-        use apollo_federation::query_plan::query_planner::QueryPlannerConfig;
-        use apollo_federation::query_plan::query_planner::QueryPlannerDebugConfig;
+    ) -> uhg_custom_appollo_federation::query_plan::query_planner::QueryPlannerConfig {
+        use uhg_custom_appollo_federation::query_plan::query_planner::QueryPlanIncrementalDeliveryConfig;
+        use uhg_custom_appollo_federation::query_plan::query_planner::QueryPlannerConfig;
+        use uhg_custom_appollo_federation::query_plan::query_planner::QueryPlannerDebugConfig;
 
         let max_evaluated_plans = self
             .supergraph

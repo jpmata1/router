@@ -7,9 +7,9 @@ use std::time::Instant;
 use apollo_compiler::validation::Valid;
 use apollo_compiler::ExecutableDocument;
 use apollo_compiler::Name;
-use apollo_federation::error::FederationError;
-use apollo_federation::query_plan::query_planner::QueryPlanOptions;
-use apollo_federation::query_plan::query_planner::QueryPlanner;
+use uhg_custom_appollo_federation::error::FederationError;
+use uhg_custom_appollo_federation::query_plan::query_planner::QueryPlanOptions;
+use uhg_custom_appollo_federation::query_plan::query_planner::QueryPlanner;
 
 use crate::error::format_bridge_errors;
 use crate::query_planner::bridge_query_planner::metric_query_planning_plan_duration;

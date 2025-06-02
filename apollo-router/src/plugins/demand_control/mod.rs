@@ -11,7 +11,7 @@ use apollo_compiler::schema::FieldLookupError;
 use apollo_compiler::validation::Valid;
 use apollo_compiler::validation::WithErrors;
 use apollo_compiler::ExecutableDocument;
-use apollo_federation::error::FederationError;
+use uhg_custom_appollo_federation::error::FederationError;
 use displaydoc::Display;
 use futures::future::Either;
 use futures::stream;

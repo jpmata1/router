@@ -4,7 +4,7 @@ use std::sync::Arc;
 
 use apollo_compiler::validation::DiagnosticList;
 use apollo_compiler::validation::WithErrors;
-use apollo_federation::error::FederationError;
+use uhg_custom_appollo_federation::error::FederationError;
 use displaydoc::Display;
 use lazy_static::__Deref;
 use router_bridge::introspect::IntrospectionError;
@@ -345,10 +345,10 @@ impl From<FederationError> for FederationErrorBridge {
     fn from(value: FederationError) -> Self {
         match &value {
             err @ FederationError::SingleFederationError(
-                apollo_federation::error::SingleFederationError::UnknownOperation,
+                uhg_custom_appollo_federation::error::SingleFederationError::UnknownOperation,
             ) => Self::UnknownOperation(err.to_string()),
             err @ FederationError::SingleFederationError(
-                apollo_federation::error::SingleFederationError::OperationNameNotProvided,
+                uhg_custom_appollo_federation::error::SingleFederationError::OperationNameNotProvided,
             ) => Self::OperationNameNotProvided(err.to_string()),
             err => Self::Other(err.to_string()),
         }

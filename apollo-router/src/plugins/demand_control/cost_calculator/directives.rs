@@ -8,7 +8,7 @@ use apollo_compiler::executable::SelectionSet;
 use apollo_compiler::parser::Parser;
 use apollo_compiler::validation::Valid;
 use apollo_compiler::Schema;
-use apollo_federation::link::cost_spec_definition::ListSizeDirective as ParsedListSizeDirective;
+use uhg_custom_appollo_federation::link::cost_spec_definition::ListSizeDirective as ParsedListSizeDirective;
 use tower::BoxError;
 
 use crate::json_ext::Object;
