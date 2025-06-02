@@ -8,7 +8,6 @@ use std::time::Instant;
 
 use futures::StreamExt;
 use opentelemetry::metrics::MeterProvider;
-use opentelemetry_api::metrics::ObservableGauge;
 use opentelemetry_api::metrics::Unit;
 use opentelemetry_api::KeyValue;
 use schemars::JsonSchema;
@@ -67,7 +66,7 @@ enum GaugeStore {
     #[default]
     Disabled,
     Pending,
-    Active(Vec<ObservableGauge<u64>>),
+    Active(()),
 }
 
 impl GaugeStore {
@@ -192,7 +191,7 @@ impl GaugeStore {
                     .init(),
             )
         }
-        GaugeStore::Active(gauges)
+        GaugeStore::Active(())
     }
 }
 

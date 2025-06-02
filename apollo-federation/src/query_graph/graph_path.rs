@@ -924,7 +924,7 @@ pub(crate) enum GraphPathTriggerRef<'a> {
 #[derive(derive_more::From)]
 pub(crate) enum GraphPathTriggerRefMut<'a> {
     Op(&'a mut OpGraphPathTrigger),
-    Transition(&'a mut QueryGraphEdgeTransition),
+    Transition(()),
 }
 
 impl<'a> From<&'a GraphPathTrigger> for GraphPathTriggerRef<'a> {
