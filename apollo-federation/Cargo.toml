@@ -1,9 +1,9 @@
 [package]
-name = "apollo-federation"
+name = "uhg-custom-appollo-federation"
 version = "1.59.2"
 authors = ["The Apollo GraphQL Contributors"]
 edition = "2021"
-description = "Apollo Federation"
+description = "This is a customized Apollo Federation, NOT the official Apollo Federation, do not use"
 documentation = "https://docs.rs/apollo-federation"
 repository = "https://github.com/apollographql/router"
 license = "Elastic-2.0"
@@ -17,7 +17,7 @@ autotests = false                                      # Integration tests are m
 snapshot_tracing = ["ron"]
 
 [dependencies]
-apollo-compiler.workspace = true
+apollo-compiler = "=1.28.0"
 time = { version = "0.3.34", default-features = false, features = [
     "local-offset",
 ] }
@@ -29,8 +29,8 @@ lazy_static = "1.4.0"
 multimap = "0.10.0"
 nom = "7.1.3"
 petgraph = { version = "0.6.4", features = ["serde-1"] }
-serde.workspace = true
-serde_json_bytes.workspace = true
+serde = { version = "1.0.215", features = ["derive", "rc"] }
+serde_json_bytes = { version = "0.2.4", features = ["preserve_order"] }
 strum = "0.26.0"
 strum_macros = "0.26.0"
 thiserror = "1.0"

@@ -202,45 +202,15 @@ dependencies = [
 ]
 
 [[package]]
-name = "apollo-federation"
-version = "1.59.2"
-dependencies = [
- "apollo-compiler",
- "derive_more",
- "either",
- "hashbrown 0.15.2",
- "hex",
- "indexmap 2.2.6",
- "insta",
- "itertools 0.13.0",
- "lazy_static",
- "multimap 0.10.0",
- "nom",
- "petgraph",
- "regex",
- "ron",
- "serde",
- "serde_json_bytes",
- "sha1",
- "strum 0.26.3",
- "strum_macros 0.26.4",
- "tempfile",
- "thiserror 1.0.63",
- "time",
- "tracing",
- "url",
-]
-
-[[package]]
 name = "apollo-federation-cli"
 version = "0.1.0"
 dependencies = [
  "apollo-compiler",
- "apollo-federation",
  "clap",
  "insta",
  "serde",
  "serde_json",
+ "uhg-custom-appollo-federation",
 ]
 
 [[package]]
@@ -7243,6 +7213,36 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ed646292ffc8188ef8ea4d1e0e0150fb15a5c2e12ad9b8fc191ae7a8a7f3c4b9"
 
 [[package]]
+name = "uhg-custom-appollo-federation"
+version = "1.59.2"
+dependencies = [
+ "apollo-compiler",
+ "derive_more",
+ "either",
+ "hashbrown 0.15.2",
+ "hex",
+ "indexmap 2.2.6",
+ "insta",
+ "itertools 0.13.0",
+ "lazy_static",
+ "multimap 0.10.0",
+ "nom",
+ "petgraph",
+ "regex",
+ "ron",
+ "serde",
+ "serde_json_bytes",
+ "sha1",
+ "strum 0.26.3",
+ "strum_macros 0.26.4",
+ "tempfile",
+ "thiserror 1.0.63",
+ "time",
+ "tracing",
+ "url",
+]
+
+[[package]]
 name = "uhg-custom-appollo-roouter"
 version = "1.59.2"
 dependencies = [
@@ -7251,7 +7251,6 @@ dependencies = [
  "anyhow",
  "apollo-compiler",
  "apollo-environment-detector",
- "apollo-federation",
  "arc-swap",
  "async-channel 1.9.0",
  "async-compression",
@@ -7399,6 +7398,7 @@ dependencies = [
  "tracing-serde",
  "tracing-subscriber",
  "tracing-test",
+ "uhg-custom-appollo-federation",
  "uname",
  "url",
  "urlencoding",
