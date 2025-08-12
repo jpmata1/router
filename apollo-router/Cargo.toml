@@ -255,6 +255,10 @@ aws-credential-types = "1.1.6"
 aws-config = "1.1.6"
 aws-types = "1.1.6"
 aws-smithy-runtime-api = { version = "1.1.6", features = ["client"] }
+# Adding explicit version constraints for aws-sdk packages that require rustc <= 1.85.0
+aws-sdk-sso = "=1.54.0"
+aws-sdk-ssooidc = "=1.55.0"
+aws-sdk-sts = "=1.55.0"
 sha1.workspace = true
 tracing-serde = "0.1.3"
 time = { version = "0.3.36", features = ["serde"] }
