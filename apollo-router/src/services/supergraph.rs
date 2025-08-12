@@ -381,8 +381,8 @@ impl Response {
     /// # Example
     ///
     /// ```
-    /// use apollo_router::services::supergraph;
-    /// use apollo_router::layers::ServiceExt as _;
+    /// uhg_custom_appollo_roouter::services::supergraph;
+    /// uhg_custom_appollo_roouter::layers::ServiceExt as _;
     /// use tower::ServiceExt as _;
     ///
     /// struct ExamplePlugin;

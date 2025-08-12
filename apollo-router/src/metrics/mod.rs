@@ -1313,7 +1313,7 @@ pub(crate) trait FutureMetricsExt<T> {
     ///
     /// # Example
     /// ```rust
-    /// # use apollo_router::metrics::FutureMetricsExt;
+    /// # uhg_custom_appollo_roouter::metrics::FutureMetricsExt;
     /// # async fn example() {
     /// let future = async { /* your async code that produces metrics */ };
     /// let result = future.with_metrics().await;
@@ -1354,7 +1354,7 @@ pub(crate) trait FutureMetricsExt<T> {
     ///
     /// # Example
     /// ```rust
-    /// # use apollo_router::metrics::FutureMetricsExt;
+    /// # uhg_custom_appollo_roouter::metrics::FutureMetricsExt;
     /// # async fn example() {
     /// let result = tokio::task::spawn(async { /* your async code that produces metrics */ }.with_current_meter_provider()).await;
     /// # }

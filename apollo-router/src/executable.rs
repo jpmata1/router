@@ -379,13 +379,13 @@ impl Executable {
     ///   Must be called (and the future awaited) in the context of an existing Tokio runtime.
     ///
     /// ```no_run
-    /// use apollo_router::{Executable, ShutdownSource};
+    /// uhg_custom_appollo_roouter::{Executable, ShutdownSource};
     /// # #[tokio::main]
     /// # async fn main() -> anyhow::Result<()> {
     /// # use futures::StreamExt;
     /// # let schemas = futures::stream::empty().boxed();
     /// # let configs = futures::stream::empty().boxed();
-    /// use apollo_router::{ConfigurationSource, SchemaSource};
+    /// uhg_custom_appollo_roouter::{ConfigurationSource, SchemaSource};
     /// Executable::builder()
     ///   .shutdown(ShutdownSource::None)
     ///   .schema(SchemaSource::Stream(schemas))

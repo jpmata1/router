@@ -2,10 +2,10 @@ use std::sync::Arc;
 use std::sync::atomic::AtomicU32;
 use std::sync::atomic::Ordering;
 
-use apollo_router::TestHarness;
-use apollo_router::graphql;
-use apollo_router::services::execution;
-use apollo_router::services::supergraph;
+uhg_custom_appollo_roouter::TestHarness;
+uhg_custom_appollo_roouter::graphql;
+uhg_custom_appollo_roouter::services::execution;
+uhg_custom_appollo_roouter::services::supergraph;
 use serde_json::json;
 use tower::BoxError;
 use tower::ServiceExt;

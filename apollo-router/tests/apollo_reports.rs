@@ -23,11 +23,11 @@ use std::sync::Arc;
 use std::time::Duration;
 
 use anyhow::anyhow;
-use apollo_router::TestHarness;
-use apollo_router::make_fake_batch;
-use apollo_router::services::router;
-use apollo_router::services::router::BoxCloneService;
-use apollo_router::services::supergraph;
+uhg_custom_appollo_roouter::TestHarness;
+uhg_custom_appollo_roouter::make_fake_batch;
+uhg_custom_appollo_roouter::services::router;
+uhg_custom_appollo_roouter::services::router::BoxCloneService;
+uhg_custom_appollo_roouter::services::supergraph;
 use axum::Extension;
 use axum::Json;
 use axum::body::Bytes;
